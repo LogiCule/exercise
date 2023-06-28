@@ -22,6 +22,8 @@ const SearchExercises = ({
     setFilteredExercises(exerciseData);
   };
 
+  console.log({ bodyPartsList });
+
   const getBodyParts = async () => {
     const bodyPartsData = await fetchData(
       "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",

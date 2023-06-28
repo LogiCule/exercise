@@ -1,8 +1,18 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import Icon from "../../assets/icons/gym.png";
+import Icon from "../../assets/icons/gym.gif";
+import BackIcon from "../../assets/icons/back.gif";
+import CardioIcon from "../../assets/icons/cardio.gif";
+import ChestIcon from "../../assets/icons/chest.gif";
+import BicepsIcon from "../../assets/icons/biceps.gif";
 
 const Bodypart = ({ item, bodyPart, setBodyPart }) => {
+  const icons = {
+    back: BackIcon,
+    cardio: CardioIcon,
+    chest: ChestIcon,
+    "upper arms": BicepsIcon,
+  };
   return (
     <Stack
       onClick={() => {
@@ -23,7 +33,12 @@ const Bodypart = ({ item, bodyPart, setBodyPart }) => {
         gap: "47px",
       }}
     >
-      <img src={Icon} alt={item} height={"40px"} width={"40px"} />
+      <img
+        src={icons[item] ? icons[item] : Icon}
+        alt={item}
+        height={"40px"}
+        width={"40px"}
+      />
       <Typography fontSize="24px" fontWeight="bold" color="#3A1212">
         {item}
       </Typography>
