@@ -24,7 +24,9 @@ const Detail = ({ exerciseDetail }) => {
     <Stack gap="60px" sx={{ flexDirection: { lg: "row" } }}>
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
-        <Typography variant="h3">{name}</Typography>
+        <Typography variant="h3" textTransform="capitalize">
+          {name}
+        </Typography>
         <Typography variant="h6">
           Exercise keep you strong. {name} is one of the best to target your{" "}
           {target}.
