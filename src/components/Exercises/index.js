@@ -13,7 +13,7 @@ const Exercises = ({ exercises, bodyPart }) => {
 
   const paginate = (e, value) => {
     setCurrentPage(value);
-    window.scrollTo({ top: 1500, behavior: "smooth" });
+    window.scrollTo({ top: 1500 });
   };
   useEffect(() => {
     setCurrentPage(1);
