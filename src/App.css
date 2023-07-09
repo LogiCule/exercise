@@ -1,6 +1,7 @@
 body {
   font-family: "Josefin Sans";
   background-color: #fffafb;
+  scroll-behavior: smooth;
 }
 
 * {
