@@ -1,5 +1,5 @@
 import { Box, Pagination, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { exerciseOptions, fetchData } from "../../utils/fetchData";
 import ExerciseCard from "../ExerciseCard";
 
@@ -9,7 +9,23 @@ const Exercises = ({
   setFilteredExercises,
   bodyPart,
 }) => {
-  console.log({ allExercises, bodyPart });
+  const [currentPage, setCurrentPage] = useState(1);
+  const exercisePerPage = 9;
+
+  const lastIndex = currentPage * exercisePerPage;
+  const firstIndex = lastIndex - exercisePerPage;
+
+  const currExercises = allExercises
+    .filter((exercise) => bodyPart === "all" || exercise.bodyPart === bodyPart)
+    .slice(firstIndex, lastIndex);
+  const paginate = (e, value) => {
+    setCurrentPage(value);
+    window.scrollTo({ top: 1500, behavior: "smooth" });
+  };
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [bodyPart]);
+
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} p="20px" mt="50px">
       <Typography variant="h3" mb="46px">
@@ -22,13 +38,28 @@ const Exercises = ({
         flexWrap="wrap"
         justifyContent={"center"}
       >
-        {allExercises
-          .filter(
-            (exercise) => bodyPart === "all" || exercise.bodyPart === bodyPart
-          )
-          ?.map((exercise, index) => (
-            <ExerciseCard key={index} exercise={exercise} />
-          ))}
+        {currExercises?.map((exercise, index) => (
+          <ExerciseCard key={index} exercise={exercise} />
+        ))}
+      </Stack>
+      <Stack mt="100px" alignItems="center">
+        {allExercises.filter(
+          (exercise) => bodyPart === "all" || exercise.bodyPart === bodyPart
+        )?.length > exercisePerPage && (
+          <Pagination
+            color="standard"
+            shape="rounded"
+            count={Math.ceil(
+              allExercises.filter(
+                (exercise) =>
+                  bodyPart === "all" || exercise.bodyPart === bodyPart
+              )?.length / exercisePerPage
+            )}
+            page={currentPage}
+            onChange={paginate}
+            size="large"
+          />
+        )}
       </Stack>
     </Box>
   );
