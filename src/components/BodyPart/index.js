@@ -17,7 +17,7 @@ const Bodypart = ({ item, bodyPart, setBodyPart }) => {
     <Stack
       onClick={() => {
         setBodyPart(item);
-        window.scrollTo({ top: 1500, left: 100, behavior: "smooth" });
+        window.scrollTo({ top: 1500, left: 100 });
       }}
       type="button"
       alignItems={"center"}

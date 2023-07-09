@@ -44,7 +44,7 @@ const SearchExercises = ({
       setFilteredExercises(SearchExercises);
       setSearchValue("");
       setBodyPart("");
-      window.scrollTo({ top: 1500, behavior: "smooth" });
+      window.scrollTo({ top: 1500 });
     }
   };
   useEffect(() => {
