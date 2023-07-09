@@ -1,11 +1,8 @@
-Certainly! Here's an example of a README file for your React app repository:
 
-```
 # Exercise Finder App
 
 The Exercise Finder App is a web application built with React that helps users find exercises for their workouts. It provides a user-friendly interface for searching and discovering a wide range of exercises based on different categories, such as muscle groups, equipment, and exercise types.
 
-![Exercise Finder App Screenshot](screenshot.png)
 
 ## Features
 
@@ -64,7 +61,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-```
-
-Feel free to customize and expand upon this template to provide more details about your specific app and its functionalities. Remember to include any necessary instructions for setting up and running the application, as well as any additional libraries or technologies used.
