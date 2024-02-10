@@ -1,7 +1,7 @@
 
 # Exercise Finder App
 The Exercise Finder App is a web application built with React that helps users find exercises for their workouts. It provides a user-friendly interface for searching and discovering a wide range of exercises based on different categories, such as muscle groups, equipment, and exercise types.
-- URL : [Deployed Version](exercise-finder-by-logicule.vercel.app)
+- URL : [Deployed Version](https://exercise-finder-by-logicule.vercel.app/)
 
 
 ## Features
