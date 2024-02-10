@@ -9,7 +9,7 @@ const Exercises = ({ exercises, bodyPart }) => {
   const lastIndex = currentPage * exercisePerPage;
   const firstIndex = lastIndex - exercisePerPage;
 
-  const currExercises = exercises.slice(firstIndex, lastIndex);
+  const currExercises = exercises?.slice(firstIndex, lastIndex) || [];
 
   const paginate = (e, value) => {
     setCurrentPage(value);

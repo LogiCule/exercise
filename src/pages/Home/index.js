@@ -12,9 +12,9 @@ const Home = () => {
   useEffect(() => {
     if (bodyPart !== "")
       setFilteredExercises(
-        allExercises.filter(
+        allExercises?.filter(
           (exercise) => bodyPart === "all" || exercise.bodyPart === bodyPart
-        )
+        ) || []
       );
   }, [bodyPart, allExercises]);
   return (

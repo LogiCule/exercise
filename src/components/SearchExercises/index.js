@@ -27,12 +27,12 @@ const SearchExercises = ({
       "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
       exerciseOptions
     );
-    setBodyPartsList(["all", ...bodyPartsData]);
+    if (bodyPartsData?.length > 0) setBodyPartsList(["all", ...bodyPartsData]);
   };
 
   const handleSearch = () => {
     if (searchValue) {
-      const SearchExercises = allExercises.filter(
+      const SearchExercises = allExercises?.filter(
         (exercise) =>
           exercise.name
             .toLowerCase()
