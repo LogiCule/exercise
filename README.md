@@ -8,44 +8,10 @@ The Exercise Finder App is a web application built with React that helps users f
 
 - Search for exercises based on muscle groups, equipment, and exercise types.
 - Browse a collection of exercises with detailed descriptions and instructions.
-- Save favorite exercises for quick access.
-- Create and manage workout routines.
-- Track and log workout sessions.
 
-## Installation
 
-1. Clone the repository:
 
-   ```shell
-   git clone https://github.com/LogiCule/exercise.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```shell
-   cd exercise
-   ```
-
-3. Install the dependencies:
-
-   ```shell
-   npm install
-   ```
-
-## Usage
-
-1. Start the development server:
-
-   ```shell
-   npm start
-   ```
-
-   This will launch the Exercise Finder App in your default browser.
-
-2. Use the search bar and filters to find exercises based on your preferences.
-3. Click on an exercise to view its details, including description, instructions, and related information.
-4. Sign up or log in to save favorite exercises and create workout routines.
-5. Track and log your workout sessions to monitor your progress.
+ 
 
 ## Technologies Used
 
