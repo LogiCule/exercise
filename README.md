@@ -1,63 +1,28 @@
+# Exercise Finder Application
 
-# Exercise Finder App
-
-The Exercise Finder App is a web application built with React that helps users find exercises for their workouts. It provides a user-friendly interface for searching and discovering a wide range of exercises based on different categories, such as muscle groups, equipment, and exercise types.
-
+## Overview
+This project is a React-based application that helps users discover exercises by body part or muscle group, view instructional GIFs, and explore related workout videos from YouTube. It provides a dynamic and intuitive interface, utilizing modern technologies and APIs for an enriched user experience.
 
 ## Features
-
-- Search for exercises based on muscle groups, equipment, and exercise types.
-- Browse a collection of exercises with detailed descriptions and instructions.
-- Save favorite exercises for quick access.
-- Create and manage workout routines.
-- Track and log workout sessions.
-
-## Installation
-
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/LogiCule/exercise.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```shell
-   cd exercise
-   ```
-
-3. Install the dependencies:
-
-   ```shell
-   npm install
-   ```
-
-## Usage
-
-1. Start the development server:
-
-   ```shell
-   npm start
-   ```
-
-   This will launch the Exercise Finder App in your default browser.
-
-2. Use the search bar and filters to find exercises based on your preferences.
-3. Click on an exercise to view its details, including description, instructions, and related information.
-4. Sign up or log in to save favorite exercises and create workout routines.
-5. Track and log your workout sessions to monitor your progress.
-
+- **Search Exercises:** Users can search exercises by selecting a body part or muscle group.
+- **Exercise Details:** For each exercise, a GIF is displayed showing how to perform it.
+- **Related Exercises:** Users can view exercises related to the one they are exploring.
+- **YouTube Integration:** Relevant YouTube videos related to the selected exercise are displayed.
+  
 ## Technologies Used
+- **React**: Front-end framework for building the user interface.
+- **React Router**: Used for navigation between pages.
+- **Material UI (MUI 5)**: For building responsive UI components.
+- **CSS**: Custom styling for enhanced user experience.
+- **RapidAPI**: To fetch exercise data via third-party APIs.
+- **YouTube API**: To fetch related workout videos.
 
-- React
-- React Router
-- Axios (for API requests)
-- CSS (with CSS modules or a CSS-in-JS solution)
+## How It Works
+1. **Exercise Search**: Users can browse exercises by selecting specific body parts or muscle groups.
+2. **Exercise Details**: Once an exercise is selected, the app displays a GIF showing the correct technique.
+3. **Related Content**: Additional related exercises are displayed along with YouTube videos to help users further explore workout options.
 
-## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Make sure to follow the existing code style and conventions.
+## Get to Exercising
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+[Start exercising](https://exercise-finder-by-logicule.vercel.app/)
