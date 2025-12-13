@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Box } from "@mui/material";
-import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ExerciseDetail from "./pages/ExerciseDetail";
@@ -9,14 +7,16 @@ import Footer from "./components/Footer";
 
 export const App = () => {
   return (
-    <Box width="400px" m="auto" sx={{ width: { xl: "1488px" } }}>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/exercise/:id" element={<ExerciseDetail />} />
-      </Routes>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exercise/:id" element={<ExerciseDetail />} />
+        </Routes>
+      </main>
       <Footer />
-    </Box>
+    </div>
   );
 };
 
